@@ -62,7 +62,7 @@ namespace ACM.BLTest
             Assert.AreEqual(expected.ShippingAddress.Country, actual.ShippingAddress.Country);
             Assert.AreEqual(expected.ShippingAddress.PostalCode, actual.ShippingAddress.PostalCode);
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 0; i++)
             {
                 Assert.AreEqual(expected.OrderDisplayItemList[i].OrderQuantity, actual.OrderDisplayItemList[i].OrderQuantity);
                 Assert.AreEqual(expected.OrderDisplayItemList[i].ProductName, actual.OrderDisplayItemList[i].ProductName);

@@ -9,19 +9,19 @@ namespace ACM.BL
 {
     public class Order : EntityBase, ILoggable
     {
-        public Order()
-        {
-
-        }
-
         public Order(int orderId)
         {
             this.OrderId = orderId;
         }
+
         public int CustomerId { get; set; }
+
         public DateTimeOffset? OrderDate { get; set; }
+
         public int OrderId { get; private set; }
+
         public List<OrderItem> orderItems { get; set; }
+
         public int ShippingAddressId { get; set; }
 
         public override bool Validate()

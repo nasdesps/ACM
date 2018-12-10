@@ -6,7 +6,7 @@ namespace ACM.BL
 {
     public class OrderItem
     {
-        public OrderItem()
+        public OrderItem() :this(0)
         {
 
         }

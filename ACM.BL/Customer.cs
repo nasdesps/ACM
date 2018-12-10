@@ -20,9 +20,13 @@ namespace ACM.BL
         }
 
         public List<Address> AddressList { get; set; }
+
         public int CustomerType { get; set; }
+
         public static int InstanceCount { get; set; }
+
         private string _lastName;
+
         public string LastName
         {
             get
@@ -35,8 +39,11 @@ namespace ACM.BL
             }
         }
         public string FirstName { get; set; }
+
         public string EmailAddress { get; set; }
+
         public int CustomerId { get; private set; }
+
         public string FullName
         {
             get
