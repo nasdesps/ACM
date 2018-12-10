@@ -50,7 +50,7 @@ namespace ACM.BL
 
             }
 
-            orderDisplay.orderDisplayItemList = new List<OrderDisplayItem>();
+            orderDisplay.OrderDisplayItemList = new List<OrderDisplayItem>();
 
             if (orderId == 10)
             {
@@ -60,7 +60,7 @@ namespace ACM.BL
                     PurchasePrice = 15.96M,
                     OrderQuantity = 2
                 };
-                orderDisplay.orderDisplayItemList.Add(orderDisplayItem);
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
 
                 orderDisplayItem = new OrderDisplayItem()
                 {
@@ -68,7 +68,7 @@ namespace ACM.BL
                     PurchasePrice = 6M,
                     OrderQuantity = 1
                 };
-                orderDisplay.orderDisplayItemList.Add(orderDisplayItem);
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
             }
 
             return orderDisplay;

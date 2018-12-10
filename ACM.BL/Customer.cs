@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
-        //Constructor chaining, calling one constructor from another constructor
+        //Constructor chaining, calling one constructor from another constructor. // Overloading
         public Customer()
             : this(0)
         {
@@ -55,7 +56,7 @@ namespace ACM.BL
             }
         }
                 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
@@ -67,6 +68,15 @@ namespace ACM.BL
         public override string ToString()
         {
             return FullName;
+        }
+
+        public string Log()
+        {
+            var logString = this.CustomerId + ": " +
+                            this.FullName + " " +
+                            "Email: " + this.EmailAddress + " " +
+                            "Status: " + this.EntityState.ToString();
+            return logString;
         }
     }
 }
